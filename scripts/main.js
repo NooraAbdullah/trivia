@@ -45,14 +45,14 @@ let questions = [
         choiceC : "Microsoft",
         correct : "B"
     }
-    // ,{
-    //     question : "Are CSS property names case-sensitive?",
-    //     imgSrc : "images/css.png",
-    //     choiceA : "Yes",
-    //     choiceB : "No",
-    //     choiceC : " Sometimes",
-    //     correct : "B"
-    // }
+    ,{
+        question : "Are CSS property names case-sensitive?",
+        imgSrc : "images/css.png",
+        choiceA : "Yes",
+        choiceB : "No",
+        choiceC : " Sometimes",
+        correct : "B"
+    }
 ];
 
 
