@@ -17,27 +17,42 @@ const restart = document.getElementById("restart");
 // create questions as array of objects
 let questions = [
     {
-        question : "What does HTML stand for?",
+        question : "What is the correct sequence of HTML tags for starting a webpage?",
         imgSrc : "../images/html.png",
-        choiceA : "Hyper Text Markup Language",
-        choiceB : "Hyperlinks and Text Markup Language",
-        choiceC : "Home Tool Markup Language",
+        choiceA : "Head, Title, HTML",
+        choiceB : "Title, Head, HTML",
+        choiceC : "HTML, Head, Title",
+        correct : "C"
+    },{
+        question : " Where in an HTML document is the correct place to refer to an external stylesheet?",
+        imgSrc : "../images/css.png",
+        choiceA : "In the 'head' section ",
+        choiceB : "In the 'body' section",
+        choiceC : " Between head and body ",
         correct : "A"
     },{
-        question : "What does CSS stand for?",
-        imgSrc : "../images/css.png",
-        choiceA : "Creative Style Sheets",
-        choiceB : "Cascading Style Sheets",
-        choiceC : "Cascade Style Sheets ",
-        correct : "B"
-    },{
-        question : "What does JS stand for?",
+        question : "What is the correct syntax for referring to an external script called 'xxx.js'?",
         imgSrc : "../images/js.png",
-        choiceA : "script",
-        choiceB : "js",
-        choiceC : "javascript",
+        choiceA : "script href='xxx.js",
+        choiceB : "script name='xxx.js",
+        choiceC : "script src='xxx.js",
         correct : "C"
+    }, {
+        question : "Who is making the Web Standards?",
+        imgSrc : "../images/web.jpg",
+        choiceA : "Mozilla",
+        choiceB : "The World Wide Web Consortium",
+        choiceC : "Microsoft",
+        correct : "B"
     }
+    // ,{
+    //     question : " Where in an HTML document is the correct place to refer to an external stylesheet?",
+    //     imgSrc : "../images/css.png",
+    //     choiceA : "In the 'head' section ",
+    //     choiceB : "In the 'body' section",
+    //     choiceC : " Between head and body ",
+    //     correct : "A"
+    // }
 ];
 
 
@@ -45,7 +60,7 @@ const noOfQuestions = questions.length
 const lastQuestion = questions.length - 1;  //index of last question/object of the "questions" array
 let runningQuestion = 0;                   //index of the current questin, to begin make it 0
 //
-const questionTime = 10; // 10s
+const questionTime = 15; // 15s
 let TIMER;
 let count = 0;
 
@@ -92,10 +107,7 @@ function renderQuestion(){  // making up the quiz page
 
 }
 
-// function finish(){
-//     learInterval(TIMER); 
-//     scoreRender()
-// }
+
 
 
 function checkAnswer(answer){ // 1)check the answer to update the flag, then set the timer to the next Q. 
@@ -141,13 +153,11 @@ function scoreRender(){
     
     if(score==noOfQuestions){
         audioClap.play();
-        // bGImg.style.display = "block";
         $("body").css("background-image", "url(../images/ballons.gif)")
    }
 
    if(score==0){
     audioFailure.play();
-    // $("#scoreContainer").css("background-image", "url(../images/failure.gif)")
 
     
 }
@@ -184,7 +194,6 @@ function startQuiz(){  //showing the quiz page
              else {
                 clearInterval(TIMER); 
                 scoreRender();
-            // finish();
             }               //No more Qs ===> display the score page
         }
        
@@ -192,10 +201,8 @@ function startQuiz(){  //showing the quiz page
     }, 1000)
 }
 
-// restart.addEventListener("click",restart);
 
 function reset(){
-    // restart.style.display = "none";
     clearInterval(TIMER); 
     runningQuestion = 0;
     count = 0
