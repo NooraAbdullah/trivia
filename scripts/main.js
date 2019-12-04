@@ -18,28 +18,28 @@ const restart = document.getElementById("restart");
 let questions = [
     {
         question : "What is the correct sequence of HTML tags for starting a webpage?",
-        imgSrc : "../images/html.png",
+        imgSrc : "images/html.png",
         choiceA : "Head, Title, HTML",
         choiceB : "Title, Head, HTML",
         choiceC : "HTML, Head, Title",
         correct : "C"
     },{
         question : " Where in an HTML document is the correct place to refer to an external stylesheet?",
-        imgSrc : "../images/css.png",
+        imgSrc : "images/css.png",
         choiceA : "In the 'head' section ",
         choiceB : "In the 'body' section",
         choiceC : " Between head and body ",
         correct : "A"
     },{
         question : "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        imgSrc : "../images/js.png",
+        imgSrc : "images/js.png",
         choiceA : "script href='xxx.js",
         choiceB : "script name='xxx.js",
         choiceC : "script src='xxx.js",
         correct : "C"
     }, {
         question : "Who is making the Web Standards?",
-        imgSrc : "../images/web.jpg",
+        imgSrc : "images/web.jpg",
         choiceA : "Mozilla",
         choiceB : "The World Wide Web Consortium",
         choiceC : "Microsoft",
@@ -47,7 +47,7 @@ let questions = [
     }
     // ,{
     //     question : " Where in an HTML document is the correct place to refer to an external stylesheet?",
-    //     imgSrc : "../images/css.png",
+    //     imgSrc : "images/css.png",
     //     choiceA : "In the 'head' section ",
     //     choiceB : "In the 'body' section",
     //     choiceC : " Between head and body ",
@@ -66,8 +66,8 @@ let count = 0;
 
 //
 let score = 0;
-let audioClap = new Audio("../Audio/winner.mp3")
-let audioFailure = new Audio("../Audio/failure.mp3")
+let audioClap = new Audio("Audio/winner.mp3")
+let audioFailure = new Audio("Audio/failure.mp3")
 
 ////////////////////////////// functions///////////////////////////////
 
@@ -144,16 +144,16 @@ function scoreRender(){
 
     
     // choose the image based on the scores
-    let img = (score == noOfQuestions) ? "../images/5.png" :
-              (score > 0) ? "../images/4.png" :
-              "../images/1.png";
+    let img = (score == noOfQuestions) ? "images/5.png" :
+              (score > 0) ? "images/4.png" :
+              "images/1.png";
     
     scoreDiv.innerHTML = "<img src="+ img +">";
     scoreDiv.innerHTML += "<p> You Scored "+ score +" Out of "+noOfQuestions+"!</p>";
     
     if(score==noOfQuestions){
         audioClap.play();
-        $("body").css("background-image", "url(../images/ballons.gif)")
+        $("body").css("background-image", "url(images/ballons.gif)")
    }
 
    if(score==0){
