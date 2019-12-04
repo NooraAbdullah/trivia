@@ -66,8 +66,12 @@ let count = 0;
 
 //
 let score = 0;
+let failureB = new Audio("Audio/failureButton.mp3")
+let winningB = new Audio("Audio/winningButton.mp3")
+
 let audioClap = new Audio("Audio/winner.mp3")
 let audioFailure = new Audio("Audio/failure.mp3")
+
 
 ////////////////////////////// functions///////////////////////////////
 
@@ -81,11 +85,15 @@ function renderProgress(){
 // answer is correct, the flag background color turns to green
 function answerIsCorrect(){
     document.getElementById(runningQuestion).style.backgroundColor = "#32a852"; //accessing the flag by its id and turn its color to green
+    winningB.play();
+
 }
 
 // answer is Wrong, the flag background color turns to red
 function answerIsWrong(){
     document.getElementById(runningQuestion).style.backgroundColor = "#bd322d";
+    failureB.play();
+
 }
 
 
