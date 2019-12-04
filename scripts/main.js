@@ -46,12 +46,12 @@ let questions = [
         correct : "B"
     }
     // ,{
-    //     question : " Where in an HTML document is the correct place to refer to an external stylesheet?",
+    //     question : "Are CSS property names case-sensitive?",
     //     imgSrc : "images/css.png",
-    //     choiceA : "In the 'head' section ",
-    //     choiceB : "In the 'body' section",
-    //     choiceC : " Between head and body ",
-    //     correct : "A"
+    //     choiceA : "Yes",
+    //     choiceB : "No",
+    //     choiceC : " Sometimes",
+    //     correct : "B"
     // }
 ];
 
