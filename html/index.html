@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia!</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+    <div id="container">
+        <div id="start" ><p class="startP">Start Quiz!</p></div>  <!-- end of start button -->
+        <div id="quiz" style=" display: none" >
+            <div id="question"> </div>
+            <div id="qImg"> </div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+            </div>
+            <div id="timer">
+                <div id="counter"></div>
+            
+            </div>
+            <div id="progress"></div>
+        </div>   <!--End of the quiz  -->
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <div id="restart" style="display:none" onclick="reset()" >Restart</div>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>  
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
+
+

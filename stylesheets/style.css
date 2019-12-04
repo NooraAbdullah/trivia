@@ -1,0 +1,411 @@
+body{
+    font-size: 20px;
+    font-family: 'Solway', serif;
+    color:#544f4d;
+    background-color: #b8b1ae;
+    /* font-weight: bolder; */
+    /* padding:100%; */
+    margin:5%;
+
+}
+#bGImg{
+opacity: 0.4;
+
+}
+#container{
+    position: relative;
+    border: 8px solid black;
+    padding:10%;
+    margin-bottom: 1%; 
+    height:280px;
+    border-radius: 15px;
+    background-color: bisque;
+}
+#start{
+    font-size: 2.4em;
+    font-weight: bolder;
+    width:500px;
+   /* height:150px; */
+    padding:1%;
+    border :solid 8px black;
+    border-radius:15px;
+    text-align: center;
+    position: absolute;
+    left:27%;
+    top:30%; 
+
+    /* color : lightgrey; */
+}
+/* .startP{
+     margin-top:50px;
+} */
+#start:hover{
+    border: 10px solid black;
+    cursor: pointer;
+    background-color:  rgba(145, 149, 161,0.4);
+    /* color : lightseagreen; */
+}
+
+#qImg{
+    float:left;
+    width : 250px;
+    height : 250px;
+    position: absolute;
+    margin:10px;
+    top:0%;
+    left:0%
+
+    /* left : 0px;
+    top : 0px; */
+}
+#qImg img{
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+}
+
+#question{
+    width:800px;
+    position: absolute;
+    font-size:190%;
+    margin:2%;
+
+    /* text-align: center; */
+    /* padding:10%; */
+    top:0%;
+    left:15%;
+
+
+    /* right:0;
+    top:0; */
+}
+#question p{
+    margin-left : 12%;
+    /* padding : 15px; */
+    font-size: 80%;
+} 
+
+#choices{
+    position: absolute;
+    padding:3%;
+    margin-top: 7%;
+    width: 73%;
+    display: flex;
+    justify-content: space-between;
+
+    /* top : 125px; */
+}
+.choice{
+    width: 250px;
+    border : 5px solid black;
+    border-radius: 8px;
+    margin:4%;
+    cursor: pointer;
+    padding : 10px;
+    text-align: center;
+    
+}
+.choice:hover{
+    border : 7px solid black;
+    font-weight: bold;
+    background: rgba(181, 171, 170,0.5);
+}
+
+#timer{
+    position: absolute;
+    /* height : 50px;
+    width : 70px; */
+    bottom : 4%;
+    left:3%;
+
+    /* border: solid 5px; */
+    /* text-align: center; */
+}
+#counter{
+    font-size:180%;
+}
+
+#progress{
+    width : 500px;
+    position: absolute;
+    bottom : 10px;
+    right : 5px;
+    padding:5px;
+
+    /* text-align: right; */
+    /* // */
+    
+    display: flex;
+    justify-content: flex-end; 
+}
+.prog{
+    width : 30px;
+    height : 30px;
+    border: 5px solid;
+    border-radius: 50%;
+    margin-left : 5px;
+    margin-right : 5px;
+}
+#scoreContainer{
+    margin : 1% auto;
+    background-color:white ;
+    opacity: 0.9;
+    height: 300px;
+    width : 600px;
+    border-radius: 10px;
+    /* box-shadow: 0px 5px 15px 0px; */
+    position: relative;
+    display: none;
+}
+#scoreContainer img{
+    position: absolute;
+    top:100px;
+    left:270px;
+}
+#scoreContainer p{
+    position: absolute;
+    display: block;
+    width : 350px;
+    height :59px;
+    top:145px;
+    left:130px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#restart {
+    position: relative;
+    width: 140px;
+    height: 40px;
+    /* top: 20%; */
+    left: 2%;
+    margin-top: 3%;
+    border: solid 5px black;
+    font-size: 150%;
+    text-align: center;
+    border-radius: 15px;
+
+    /* margin-top:190px; */
+}
+
+#restart:hover{
+    border : 8px solid black;
+    font-weight: bold;
+    background: rgba(181, 171, 170,0.9);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Setting up the responsive style for iPhoneX */
+
+ @media screen and (max-width: 500px){
+
+    body{
+        font-size: 120%;
+        font-family: 'Solway', serif;
+        color:#544f4d;
+        background-color: #b8b1ae;
+        /* font-weight: bolder; */
+        /* padding:100%; */
+        margin:5%;
+    
+    }
+    
+    #container{
+        position: relative;
+        border: 8px solid black;
+        padding:10%;
+        margin-bottom: 1%; 
+        height:640px;
+        border-radius: 15px;
+        background-color: bisque;
+    }
+    #start{
+        font-size: 190%;
+        /* font-weight: 800; */
+        font-weight: bolder;
+        width:70%;
+       /* height:150px; */
+        padding:1%;
+        border :solid 8px black;
+        border-radius:15px;
+        text-align: center;
+        position: absolute;
+        left:13%;
+        top:40%; 
+    
+        /* color : lightgrey; */
+    }
+    /* .startP{
+         margin-top:50px; 
+    } */
+    #start:hover{
+        border: 10px solid black;
+        cursor: pointer;
+        background-color:  rgba(145, 149, 161,0.4);
+        /* color : lightseagreen; */
+    }
+    
+    #qImg{
+        float:left;
+        width : 250px;
+        height : 250px;
+        position: absolute;
+        margin:10px;
+        top:0%;
+        left:0%
+    
+        /* left : 0px;
+        top : 0px; */
+    }
+    #qImg img{
+        width: 40%;
+        height: 50%;
+        border-radius: 5px;
+    }
+    
+    #question{
+        width:260px;
+        position: absolute;
+        font-size:160%;
+        /* margin:2%; */
+        margin-left: 11%;
+    
+        /* text-align: center; */
+        /* padding:10%; */
+        /* top:0%; */
+        /* left:15%; */
+    
+    
+        /* right:0;
+        top:0; */
+    }
+    /* #question p{
+        /* margin-left : 12%; 
+        /* padding : 15px; 
+        /* font-size: 80%; 
+    }  */
+    
+    #choices{
+        position: absolute;
+        padding:3%;
+        margin-top: 70%;
+        left: 0%;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        /* align-content:column; */
+    
+        /* top : 125px; */
+    }
+    .choice{
+        width: 250px;
+        border : 5px solid black;
+        border-radius: 8px;
+        margin:4%;
+        cursor: pointer;
+        padding : 10px;
+        text-align: center;
+        
+    }
+    .choice:hover{
+        border : 7px solid black;
+        font-weight: bold;
+        background: rgba(181, 171, 170,0.5);
+    }
+    
+    #timer{
+        position: absolute;
+        /* height : 50px;
+        width : 70px; */
+        bottom : 4%;
+        left:3%;
+    
+        /* border: solid 5px; */
+        /* text-align: center; */
+    }
+    #counter{
+        font-size:180%;
+    }
+    
+    #progress{
+        width : 500px;
+        position: absolute;
+        bottom : 10px;
+        right : 5px;
+        padding:5px;
+    
+        /* text-align: right; */
+        /* // */
+        
+        display: flex;
+        justify-content: flex-end; 
+    }
+    .prog{
+        width : 30px;
+        height : 30px;
+        border: 5px solid;
+        border-radius: 50%;
+        margin-left : 5px;
+        margin-right : 5px;
+    }
+    #scoreContainer{
+        margin : 1% auto;
+        background-color:white ;
+        opacity: 0.9;
+        height: 300px;
+        width : 100%;
+        border-radius: 10px;
+        /* box-shadow: 0px 5px 15px 0px; */
+        position: relative;
+        display: none;
+        top:30%;
+    }
+    #scoreContainer img{
+        position: absolute;
+        top:20%;
+        left:40%;
+    }
+    #scoreContainer p{
+        position: absolute;
+        display: block;
+        width : 70%;
+        height :59px;
+        top:40%;
+        left:15%;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    #restart {
+        position: relative;
+        width: 140px;
+        height: 40px;
+        /* top: 20%; */
+        left: 2%;
+        /* bottom: 90px; */
+        border: solid 5px black;
+        font-size: 150%;
+        text-align: center;
+        border-radius: 15px;
+    
+        /* margin-top:190px; */
+    }
+    
+    #restart:hover{
+        border : 8px solid black;
+        font-weight: bold;
+        background: rgba(181, 171, 170,0.9);
+        cursor: pointer;
+    }
+    
+    
+ }
