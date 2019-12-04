@@ -33,9 +33,9 @@ let questions = [
     },{
         question : "What is the correct syntax for referring to an external script called 'xxx.js'?",
         imgSrc : "images/js.png",
-        choiceA : "script href='xxx.js",
-        choiceB : "script name='xxx.js",
-        choiceC : "script src='xxx.js",
+        choiceA : "script href= xxx.js",
+        choiceB : "script name= xxx.js",
+        choiceC : "script src= xxx.js",
         correct : "C"
     }, {
         question : "Who is making the Web Standards?",
