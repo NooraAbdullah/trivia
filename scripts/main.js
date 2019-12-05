@@ -102,7 +102,7 @@ function answerIsWrong(){
 function renderQuestion(){  // making up the quiz page
     let q = questions[runningQuestion];   //q is current object of the array "questions"
     /// 
-    console.log(q)
+    // console.log(q)
     question.innerHTML = "<p>"+ q.question +"</p>"; // Adding "question" property from the object to the element with id "question" in the HTML
     qImg.innerHTML = "<img src="+ q.imgSrc +">";    // Adding "imgSrc" property from the object to the element with id "qImg" in the HTML
     choiceA.innerHTML = q.choiceA;                 // ...
@@ -219,5 +219,7 @@ function reset(){
     scoreDiv.style.display = "none"
     $("#progress").html('')
     quiz.style.display = "none";
-    startQuiz()
+    start.style.display = "block";
+
+    // startQuiz()
 }
